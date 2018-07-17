@@ -1,0 +1,70 @@
+body {
+    background-color: $white;
+    color: $colorDarkest;
+}
+
+
+
+header {
+
+    // shrink header to 80% and center it
+    width: 80%;
+    margin: 3% auto 0 auto;
+
+    text-align: center;
+    font-family: $fontTitle;
+    color: $colorHighlight;
+
+    nav {
+
+        font-family: $font;
+        margin: 1.5% 0 0 0;
+        position: relative; // make realtive so nav::after absolute finds this parent
+
+        ul {
+            display: inline;
+            list-style: none;
+            padding: 0;
+            margin: 0 1%;
+            background-color: $white;
+            z-index: 1;
+        }
+
+
+        li {
+            display: inline;
+            margin-left: 1.5%;
+
+            text-transform: uppercase;
+
+            a {
+                color: $colorDarkest;
+                text-decoration: none;
+            }
+        }
+
+        li:last-child {           
+                margin-right: 1.5%;
+        }
+    }
+   
+}
+
+
+// Desktop Stuff!
+
+/* //desktop 
+
+
+nav::after {
+        content: '';
+        position: absolute;
+        height: 10%;
+        background-color: $colorLight;
+        width: 100%;
+        top: 50%;
+        left: 0px;
+        z-index: -1;
+    } */
+
+    
