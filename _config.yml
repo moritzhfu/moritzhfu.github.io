@@ -1,5 +1,24 @@
+title: ModelViewProjection
+description: Personal site and CV - dedicated to computer graphics and visual computing
+url: http://www.moritzroetner.de
+author: Moritz Roetner
+logo:
+social:
+    name: Moritz Roetner
+    links:
+        - https://www.linkedin.com/in/moritzroetner/
+        - https://www.xing.com/profile/Moritz_Roetner/
+        - https://github.com/moritzhfu
+        - https://500px.com/moritzroetner
+
+
+google_site_verification: ohpDFP7OsX97GDTa-0JwzfzzncWRPs_Oc9MVFPvbGws
+lang: en_US
+
 sass:
     style: compressed
 theme:
     jekyll-theme-slate
+plugins:
+    - jekyll-seo-tag
 

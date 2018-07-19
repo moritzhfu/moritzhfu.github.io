@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> {% seo %}
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+
+    <script>
+        var burgerButtonActive = false;
+        var button;
+        var background;
+
+        window.addEventListener("load", init);
+
+        function init() {
+            button = document.getElementById("burgerButton");
+            background = document.getElementsByTagName("html")[0];
+
+            initBurgerButton();
+        }
+
+        function initBurgerButton() {
+            button.addEventListener("click", handleBurgerButton)
+        }
+
+        function handleBurgerButton() {
+
+            if (burgerButtonActive) {
+                button.classList.toggle("burgerButtonOpen");
+                button.classList.toggle("burgerButtonClosed");
+                document.getElementsByTagName("nav")[0].classList.toggle("notVisible");
+            }
+            else {
+                button.classList.toggle("burgerButtonClosed");
+                button.classList.toggle("burgerButtonOpen");
+                document.getElementsByTagName("nav")[0].classList.toggle("notVisible");
+            }
+
+
+            burgerButtonActive = !burgerButtonActive;
+
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <!-- TODO: Add to desktop later
+    <nav class="navbar">
+                <ul class="">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About &amp; CV</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">SearchIcon</a>
+                    </li>
+                </ul>
+            </nav>
+-->
+
+        <div class="columns is-mobile">
+            <div class="column"></div>
+            <div class="column has-text-centered">
+                <h1>{{ site.title }}</h1>
+            </div>
+            <div class="column has-text-right">
+                <span>Ô</span>
+                <span class="is-hidden-desktop">=</span>
+            </div>
+        </div>
+
+        <div class="container is-fluid has-text-centered">
+            <nav class="navbar">
+                <div class="container has-text-centered">
+                    <a href="#">Home</a>
+                </div>
+                <div class="container">
+                    <a href="#">About &amp; CV</a>
+                </div>
+                <div class="container">
+                    <a href="#">Blog</a>
+                </div>
+
+
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html>

@@ -1,70 +1,41 @@
-body {
+/// Variables
+$white: #FFFFFF;
+$black: #1a1a1a;
+
+$dark: #363636;
+$highlight: #e47876;
+
+$font: 'Montserrat', sans-serif;
+$fontWeight: 400;
+$boldFontWeight: 500;
+
+$family-primary: $font;
+$primary: $highlight;
+
+/// bulma
+@import "bulma";
+
+// global settings
+html {
+    font-family: $font;
+    font-weight: $fontWeight;
+
+    color: $dark;
     background-color: $white;
-    color: $colorDarkest;
-}
 
+    padding: 0;
+    margin: 0;
 
-
-header {
-
-    // shrink header to 80% and center it
-    width: 80%;
-    margin: 3% auto 0 auto;
-
-    text-align: center;
-    font-family: $fontTitle;
-    color: $colorHighlight;
-
-    nav {
-
-        font-family: $font;
-        margin: 1.5% 0 0 0;
-        position: relative; // make realtive so nav::after absolute finds this parent
-
-        ul {
-            display: inline;
-            list-style: none;
-            padding: 0;
-            margin: 0 1%;
-            background-color: $white;
-            z-index: 1;
-        }
-
-
-        li {
-            display: inline;
-            margin-left: 1.5%;
-
-            text-transform: uppercase;
-
-            a {
-                color: $colorDarkest;
-                text-decoration: none;
-            }
-        }
-
-        li:last-child {           
-                margin-right: 1.5%;
-        }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: $boldFontWeight;
     }
-   
-}
-
-
-// Desktop Stuff!
-
-/* //desktop 
-
-
-nav::after {
-        content: '';
-        position: absolute;
-        height: 10%;
-        background-color: $colorLight;
-        width: 100%;
-        top: 50%;
-        left: 0px;
-        z-index: -1;
-    } */
-
     
+    a, a:visited, a:active {
+        text-decoration: none;
+        color: $dark;    
+    }
+    
+    a:hover {
+        border-bottom: 3px solid $highlight;
+    }
+}

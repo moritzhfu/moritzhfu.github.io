@@ -1,5 +1,5 @@
 ---
-layout: new
+layout: landing
 permalink: /new/
 ---
 
