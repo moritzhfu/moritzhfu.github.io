@@ -1,5 +1,0 @@
----
-layout: new
-permalink: /new/
----
-
